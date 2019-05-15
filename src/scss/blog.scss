@@ -1,0 +1,9 @@
+.blog-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    
+    div {
+        margin-bottom: 50px;
+    }
+}

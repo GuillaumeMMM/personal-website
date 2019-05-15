@@ -1,0 +1,27 @@
+.header-container {
+    min-height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 70%;
+    margin-left: 15%;
+    padding: 20px 0;
+
+    .header-bottom {
+        font-size: 1.2em;
+        width: 100%;
+
+        ul {
+            margin-top: 15px;
+            display: flex;
+
+            li:not(:last-child) {
+                padding-right: 10px;
+            }
+
+            a {
+                color: $primary;
+            }
+        }
+    }
+}

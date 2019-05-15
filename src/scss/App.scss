@@ -1,0 +1,86 @@
+$primary: #383838;
+$secondary: #f5f4f5;
+$tertiary: rgb(255, 153, 170);
+$tertiary-light: rgb(252, 215, 221);
+
+@import './header.scss';
+@import './content.scss';
+@import './navbar.scss';
+@import './work.scss';
+@import './blog.scss';
+@import './work-element.scss';
+@import './blog-element.scss';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $secondary;
+  background-image: linear-gradient(160deg, $secondary 0%, #d8d6d6 100%);
+  color: $primary;
+  font-family: 'Open Sans', sans-serif;
+
+  .App {
+    min-height: 100vh;
+    width: 100%;
+    letter-spacing: 0.3px;
+
+    h1 {
+      font-size: 5em;
+      font-weight: 400;
+      letter-spacing: 1px;
+    }
+
+    h2 {
+      font-size: 1.5em;
+      font-weight: 400;
+      letter-spacing: 1px;
+    }
+
+    a {
+      color: $primary;
+      text-decoration: none;
+      border-bottom: 2px solid $tertiary;
+      background-image: linear-gradient(180deg, transparent 65%, $tertiary-light 0);
+      background-size: 0% 100%;
+      cursor: pointer;
+    }
+
+    a:hover {
+      background-size: 100% 100%;
+    }
+
+    strong {
+      padding: 1px 3px;
+      background-image: linear-gradient(180deg, transparent 65%, $tertiary-light 0);
+      font-weight: 400;
+    }
+
+    ul {
+      list-style: none;
+
+      a {
+        text-decoration: none;
+      }
+    }
+  }
+
+  @media only screen and (max-width: 850px)  {
+    .content-container {
+      width: 70%;
+      margin-left: 15%;
+    }
+    h1 {
+      font-size: 4em !important;
+    }
+  }
+
+  @media only screen and (max-width: 500px)  {
+    h1 {
+      font-size: 3em !important;
+    }
+  }
+}
