@@ -1,47 +1,63 @@
 import React, { Component } from 'react';
-import WorkElement from './WorkElement';
+import { Route, Link, BrowserRouter as Router } from 'react-router-dom'
+
+// import circles from '../assets/circles.jpg';
+// import andree from '../assets/andree.jpg';
+// import github from '../assets/github.jpg';
+// import speech from '../assets/speech.jpg';
+// import collage from '../assets/collage.jpg';
+
+import sdh from '../assets/sdh.jpg';
+import spa from '../assets/spa.jpg';
+import sae from '../assets/sae.jpg';
+import salp from '../assets/salp.jpg';
+import scm from '../assets/scm.jpg';
+import ssr from '../assets/ssr.jpg';
+import sca from '../assets/smv.jpg';
 
 class Work extends Component {
-
-    state ={
-        workElements: [
-            {
-                title: 'Data Humanism case study',
-                description: "This interactive data visualization. It shows in a data humanist way the reports for a running app. This case study of a new way for designing data visualization was inspired by Giorgia Lupi's work.",
-                link: 'https://guillaumemmm.github.io/running/index.html'
-            },
-            {
-                title: 'Speech repartition in French media',
-                description: "This interactive data visualization shows the speech repartition of genders in the main French media. The data was obtained thanks to data.gouv.fr and the work of David Doukhan and Jean Carrive.",
-                link: 'https://guillaumemmm.github.io/tempsdeparole/'
-            },
-            {
-                title: 'Michelle Versillé Art website',
-                description: 'For the French collage artist Michelel Versillé, I designed and coded this simple website that shows part of her works.',
-                link: 'https://guillaumemmm.github.io/michelleversille/'
-            },
-            {
-                title: 'Musicalization of github contributions',
-                description: "This data visualization shows any github user's contributions. After chosing the username, the 'Music' button plays a song with different sound samples for each contribution.",
-                link: 'https://guillaumemmm.github.io/contributionsmusic/'
-            },
-            {
-                title: 'André.e Lawrance Brand',
-                description: 'André.e Lawrance is a fashion brand that I launched in 2018. I tried to give it a global graphical cohesion with the pattern design, the sewing, the photography, the webdesign, the storytelling, the communication and the website.',
-                link: 'http://www.andreelawrance.fr'
-            },
-            {
-                title: 'Threejs 3D experiment',
-                description: 'To have a first experience with the 3D library three.js, I made this simple 3D game. The goal is to go through all the mazes without touching the cubes. Difficulty increases until the game is over.',
-                link: 'https://guillaumemmm.github.io/3Dgame/'
-            },
-        ]
-    } 
     render() {
         return (
-            <div className="work-container">
-                {this.state.workElements.map((workElm, i) => <WorkElement data={workElm} key={i}></WorkElement>)}
-            </div>
+            <React.Fragment>
+                <p className="intro-projects"> Take a look at some of my most recent projects ↓</p>
+                <div className="work-container">
+                    {/* {this.state.workElements.map((workElm, i) => <WorkElement data={workElm} key={i}></WorkElement>)} */}
+                    <Link to="/data-humanism" className="work-element">
+                        <img className="work-element-image" src={sdh} alt="circles dataviz"></img>
+                        <h3>Data Humanism</h3>
+                    </Link>
+
+                    <Link to="/positive-actions" className="work-element">
+                        <img className="work-element-image" src={spa} alt="circles dataviz"></img>
+                        <h3>Positive Actions</h3>
+                    </Link>
+
+                    <Link to="/andree-lawrance-website" className="work-element">
+                        <img className="work-element-image" src={sae} alt="circles dataviz"></img>
+                        <h3>André·e Lawrance Website</h3>
+                    </Link>
+
+                    <Link to="/andree-lawrance" className="work-element">
+                        <img className="work-element-image" src={salp} alt="circles dataviz"></img>
+                        <h3>André·e Lawrance Project</h3>
+                    </Link>
+
+                    {/* <Link to="/contribution-music" className="work-element">
+                        <img className="work-element-image" src={scm} alt="circles dataviz"></img>
+                        <h3>Github Contributions Music</h3>
+                    </Link> */}
+
+                    <Link to="/speech-repartition" className="work-element">
+                        <img className="work-element-image" src={ssr} alt="circles dataviz"></img>
+                        <h3>Speaking Time Repartition</h3>
+                    </Link>
+
+                    <Link to="/collage-website" className="work-element">
+                        <img className="work-element-image" src={sca} alt="circles dataviz"></img>
+                        <h3>Collage Artist Website</h3>
+                    </Link>
+                </div>
+            </React.Fragment>
         );
     }
 }

@@ -1,0 +1,45 @@
+.positive-actions-container, .andree-lawrance-container , .andree-lawrance-website-container, .data-humanism-container, .contribution-music-container, .collage-website-container, .speech-repartition-container {
+    width: 100%;
+    position: relative;
+    font-size: 0.8em;
+    letter-spacing: 0.1;
+
+    .link {
+        position: absolute;
+        left: -50px;
+        border-bottom: none;
+        background-image: none;
+        padding-bottom: 50px;
+        padding-right: 5px;
+        border-right: 2px solid $tertiary;
+    }
+
+    h3 {
+        padding: 3px 10px;
+        margin: 30px 0;
+        font-weight: 400;
+        font-size: 1.9em;
+    }
+
+    h4 {
+        padding: 3px 10px;
+        margin: 30px 0;
+        font-weight: 400;
+        font-size: 1.3em;
+    }
+
+    p {
+        margin: 20px 0;
+    }
+
+    img {
+        width: 100%;
+        border: 2px solid $secondary;
+        margin: 20px 0;
+
+        &.small-right {
+            width: 25%;
+            border: none;
+        }
+    }
+}
